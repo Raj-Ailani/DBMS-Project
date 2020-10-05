@@ -163,11 +163,16 @@ background-color: #f6f7d7 ;
 #caption h2{
     font-size: 40px;
     font-family: Bungee, serif;
+    color: white;
 }
 #caption p{
-    font-size: 35px;
+    font-size: 32px;
     font-family: Bungee, serif;
+    color: white;
 } 
+#caption{
+    margin-bottom: 20px;
+}
 
 
 
@@ -339,4 +344,32 @@ background-color: #f6f7d7 ;
 #erdcontent{
     margin-top: 50px;
 }
+
+/* ---------------------------------------Project Page---------------------------------- */
+#head-project{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: white;
+    border-bottom:25px solid #ff9a00;
+}
+
+#project-tab{
+    font-size: 20px;
+}
+#tabcon{
+    font-family: Sen,serif;
+}
+
+/* ---------------------------------------Project Page---------------------------------- */
+
+
+
+
+
+
+
+
+
+
 

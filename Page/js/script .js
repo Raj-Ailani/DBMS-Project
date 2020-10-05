@@ -31,7 +31,7 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() {
   modal.style.display = "none";
 }
-//---------------------------------------------------------------------------
+
 
 //ERD Model----------------------------------------------------------------
 var modal1 = document.getElementById("myModal1");
