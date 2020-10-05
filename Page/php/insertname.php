@@ -7,7 +7,7 @@
     <h1>Done</h1>
 <?php
 
-echo "<p>" .$_POST['UserName']."</p>";  
+echo "<p>" .$_POST['UserEmail']."</p>";  
 
 
 

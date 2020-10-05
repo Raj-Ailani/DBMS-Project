@@ -70,14 +70,13 @@
         <div class="tab-content" id="tabcon">
           <div id="insert" class="tab-pane fade in active">
        <h1>Insert Data In Driver's Data</h1>
-       <div>
-        DriverID: <input type="number" name="id" id="exampleid" placeholder="Enter The ID" class="ff"><br>
-        Name: <input type="text" name="name" id="exampleinput" placeholder="Enter The name" class="ff"><br>
-        E-mail: <input type="text" name="email" id="exampleemail" placeholder="Enter The email" class="ff"><br>
-        Number: <input type="number" name="number" id="examplenumber" placeholder="Enter The Number" class="ff"><br>
-
-        <button id="insertbutton">click me</button>
-    </div>
+    
+       <div class="form-group" id="first">
+        <label for="name">Email:</label>
+        <input type="email" class="form-control" id="insertemail" placeholder="Enter email" name="email">
+        <button type="submit" class="btn btn-default" id="insertbutton">Submit</button>
+      </div>
+    
        <div id="demo"></div>
           </div>
           <div id="search" class="tab-pane fade">

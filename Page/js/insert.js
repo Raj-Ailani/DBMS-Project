@@ -1,18 +1,16 @@
 $(document).ready(function(){
       
     $("#insertbutton").click(function(){
-        var name = $("#exampleinput").val();
-        var email = $("#exampleemail").val();
-        var number =$("#examplenumber").val();
-        var id =$("#exampleid").val();
+       
+        var email = $("#insertemail").val();
+
+        var id =$("id").val();
         $.post("../Page/php/insertname.php", {
-          UserName : name,
-          UserEmail:email,
-          UserNumber: number,
-          UserId: id
+  
+          UserEmail:email        
         } , function(data,status){
           $("#demo").html(data);
-           
+        
         });
       });
 
