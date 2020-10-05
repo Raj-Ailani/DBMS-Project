@@ -13,7 +13,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="js/script .js"></script>
+  <script src="js/insert.js"></script>
+  <script src="js/search.js"></script>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -69,7 +70,15 @@
         <div class="tab-content" id="tabcon">
           <div id="insert" class="tab-pane fade in active">
        <h1>Insert Data In Driver's Data</h1>
-       <p></p>
+       <div>
+        DriverID: <input type="number" name="id" id="exampleid" placeholder="Enter The ID" class="ff"><br>
+        Name: <input type="text" name="name" id="exampleinput" placeholder="Enter The name" class="ff"><br>
+        E-mail: <input type="text" name="email" id="exampleemail" placeholder="Enter The email" class="ff"><br>
+        Number: <input type="number" name="number" id="examplenumber" placeholder="Enter The Number" class="ff"><br>
+
+        <button id="insertbutton">click me</button>
+    </div>
+       <div id="demo"></div>
           </div>
           <div id="search" class="tab-pane fade">
             <h3>Menu 1</h3>
