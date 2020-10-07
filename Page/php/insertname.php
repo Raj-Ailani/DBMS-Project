@@ -27,11 +27,11 @@ $aadhar =$_POST['useraadhar'];
 
 $sql="INSERT INTO `driver_information` (`DriverID`, `DriverName`, `Email` ,`DriverNumber` ,`DriverGender` ,`DriverAge` ,`Driver_DL` ,`AadharCard` ) VALUES (NULL, '$name', '$email' , '$number' , '$gender','$age' , '$dl' ,'$aadhar' )";
 if ($con->query($sql) === TRUE) {
-    echo "<h3> Data Inserted successfully</h3>"
+    echo "<h3> Data Inserted successfully</h3>";
 }
 else 
 {
-    echo "failed";
+    echo "<h3> Failed to insert </h3>";
 }
 
 
