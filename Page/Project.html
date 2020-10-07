@@ -22,7 +22,7 @@
 
 <body>
     <header>
-        <nav id="head-project"  class="navbar navbar-default" >
+        <nav id="head"  class="navbar navbar-default" >
           <a href="#">
           <i class="fa fa-taxi" style="float: left; font-size: 45px; margin-left: 305px; margin-top: 20px; color: #ffbf00;"></i></a>
           
@@ -58,8 +58,8 @@
 
 
       <div class="container" id="raj">
-        <h2>Dynamic Tabs</h2>
-        <p>To make the tabs toggleable, add the data-toggle="tab" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
+           
+          
       
         <ul class="nav nav-tabs" id="project-tab">
           <li class="active"><a data-toggle="tab" href="#insert">Insert Data</a></li>
@@ -69,12 +69,45 @@
       
         <div class="tab-content" id="tabcon">
           <div id="insert" class="tab-pane fade in active">
-       <h1>Insert Data In Driver's Data</h1>
+       <h1>Enter Driver Details</h1>
     
        <div class="form-group" id="first">
-        <input type="text" id="insertemail" name="email" />
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="insertname" placeholder="Enter name" name="name">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="insertemail" placeholder="Enter email" name="email">
+  
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="insertpwd" placeholder="Enter password" name="pwd">
+
+        <label for="num">Number:</label>
+        <input type="number" class="form-control" id="insertnumber" placeholder="Enter number" name="number">
+        
+        
+        <label for="gender">Gender:</label>
+        <input type="text" class="form-control" id="insertgender" placeholder="Enter gender" name="gender">
+
+
+        <label for="age">Age:</label>
+        <input type="number" class="form-control" id="insertage" placeholder="Enter Age" name="age">
+
+
+        <label for="DL">DL - Number:</label>
+        <input type="number" class="form-control" id="insertdl" placeholder="Enter DL-number" name="dl">
+
+
+        <label for="aadhar">Aadhar Card Number:</label>
+        <input type="number" class="form-control" id="insertaadhar" placeholder="Enter number" name="aadhar">
+
+
+        
+
+
+
         <button type="submit" class="btn btn-default" id="insertbutton">Submit</button>
       </div>
+       
+  
     
        <div id="demo"></div>
           </div>

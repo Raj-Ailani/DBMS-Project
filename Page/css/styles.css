@@ -346,13 +346,8 @@ background-color: #f6f7d7 ;
 }
 
 /* ---------------------------------------Project Page---------------------------------- */
-#head-project{
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    background-color: white;
-    border-bottom:25px solid #ff9a00;
-}
+
+
 
 #project-tab{
     font-size: 20px;
@@ -366,6 +361,7 @@ background-color: #f6f7d7 ;
 #first button{
     margin-top: 20px;
 }
+
 
 /* ---------------------------------------Project Page---------------------------------- */
 
