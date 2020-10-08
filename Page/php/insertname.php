@@ -8,6 +8,39 @@
 
 
 <?php
+
+
+
+
+
+// $data = file_get_contents($file);
+// $array = json_decode($data, true);
+
+
+// foreach($array as $row){
+//   $sql = "INSERT INTO driver_information(DriverID,Email,DriverPassword,DriverName,DriverNumber,DriverGender,DriverAge,Driver_DL,AadharCard,Shift,Driver_Curr_Loc,DriverWallet) VALUES('.$row[id].','$row[email]','.$row[password].','.$row[firstname].','.$row[number].','.$row[gender].','.$row[age].','.$row[driver_dl].','.$row[aadhar_card].','.$row[shift].','.$row[location].','.$row[wallet].')";
+// mysqli_query($con ,$sql);
+
+// }
+
+
+// echo "DATA INSERTED";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $host = "localhost";
 $user = "root";
 $pass = '';
@@ -36,15 +69,16 @@ else
 
 
 
-// echo "<p>" .$name. "</p>";
-
-// echo "<p>" .$email . "</p>";
-
-// echo "<p>" .$number. "</p>";
-// echo "<p>" .$gender . "</p>";
-// echo "<p>" .$age . "</p>";
-// echo "<p>" .$dl . "</p>";
-// echo "<p>" .$aadhar . "</p>";
-
 ?>
 </body>
+
+
+
+
+
+
+
+
+
+
+
