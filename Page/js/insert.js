@@ -69,6 +69,22 @@ $(document).ready(function(){
   
 
 
+    $("#searchbuttondriver").click(function(){
+      var searchemail = $("#driveremail").val();
+      var searchpwd = $("driverpwd").val();
+      $.post("../Page/php/searchdriver.php",{
+          demail : searchemail,
+          dpwd : searchpwd
+
+      },function(data,status){
+          $("#first4").html(data);
+    
+      });
+
+  });
+
+
+
 
 
 

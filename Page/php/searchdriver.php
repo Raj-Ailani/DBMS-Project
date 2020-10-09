@@ -16,7 +16,7 @@
 
 
 <div id="heading1">
-<h2>User Information</h2>
+<h2>Driver Information</h2>
 </div>
 
 
@@ -30,13 +30,13 @@ $con=mysqli_connect($host,$user,$pass,$db);
 
 
 
-if(isset($_POST['uemail'])){
+if(isset($_POST['demail'])){
 
 
-$email = $_POST['uemail'];
+$email = $_POST['demail'];
 $i = 1;
 
-$sql = "SELECT * FROM `user_info` WHERE `email`= '$email'";
+$sql = "SELECT * FROM `driver_info` WHERE `driveremail`= '$email'";
 $result = mysqli_query($con,$sql);
 while($row = mysqli_fetch_array($result)) {
 
@@ -52,18 +52,22 @@ while($row = mysqli_fetch_array($result)) {
   margin-top: 20px;
   list-style-type:none;
   font-family: Sen ,serif;">
- <li>   Username:
-    <?php  echo  $row['username'] ;   ?></li>
-    
-    <li>   City:
-    <?php  echo  $row['city'] ;   ?></li>
-    
-    <li>   State:
-    <?php  echo  $row['state'] ;   ?></li>
-    
+  <li>   ID:
+    <?php  echo  $row['driverid'] ;   ?></li>
+    <li>   Name:
+    <?php  echo  $row['drivername'] ;   ?></li>
+    <li>   Age:
+    <?php  echo  $row['age'] ;   ?></li>
+    <li>   Driving Licence:
+    <?php  echo  $row['d_licence'] ;   ?></li>
+ <li>   Aadhar Card Details:
+    <?php  echo  $row['aadhar'] ;   ?></li>
+    <li>   Shift:
+    <?php  echo  $row['shift'] ;   ?></li>
+    <li>   Wallet:
+    <?php  echo  $row['wallet'] ;   ?></li>
     <?php   ?>
 </ul>
-<button type="button" class="btn btn-primary" id="book" >Book Taxi</button>
 </div>
 
 

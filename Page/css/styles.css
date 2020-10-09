@@ -376,6 +376,14 @@ background-color: #f6f7d7 ;
 #first3 button{
   margin-top: 20px;
 }
+
+
+#first4 label{
+  margin-top: 20px;
+}
+#first4 button{
+  margin-top: 20px;
+}
 #box1{
   background-color: white;
   margin-top: 40px;
@@ -392,10 +400,6 @@ background-color: #f6f7d7 ;
 }
 #heading1 {
 
-  padding: 0 0 10px 0;
-  margin: 15px;
-}
-#top {
   border-bottom   : 2px solid rgba(0,0,0,0.1);
   padding: 0 0 10px 0;
   margin: 15px;
@@ -403,6 +407,9 @@ background-color: #f6f7d7 ;
 
 
 
+#book{
+  margin: 35px;
+}
 /* ---------------------------------------Project Page---------------------------------- */
 
 
