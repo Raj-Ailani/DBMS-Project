@@ -66,13 +66,14 @@
           
       
         <ul class="nav nav-tabs" id="project-tab">
-          <li class="active"><a data-toggle="tab" href="#insert"> Insert Driver Data</a></li>
+          <li class="active"><a data-toggle="tab" href="#insertdriver"> Insert Driver Data</a></li>
           <li><a data-toggle="tab" href="#insertuser">Insert User Data</a></li>
+          <li><a data-toggle="tab" href="#searchuser">Search User Data</a></li>
        
         </ul>
       
         <div class="tab-content" id="tabcon">
-          <div id="insert" class="tab-pane fade in active">
+          <div id="insertdriver" class="tab-pane fade in active">
        <h1>Enter Driver Details</h1>
     
        <div class="form-group" id="first">
@@ -108,7 +109,7 @@
 
 
 
-        <button type="submit" class="btn btn-default" id="insertbutton">Submit</button>
+        <button type="submit" class="btn btn-default" id="insertbuttondriver">Submit</button>
       </div>
        
   
@@ -118,21 +119,73 @@
           <div id="insertuser" class="tab-pane fade">
             <h1>Enter User Details</h1>
             
+            <div class="form-group" id="first2">
+              <label for="name">Name:</label>
+              <input type="text" class="form-control" id="insertusername" placeholder="Enter name" name="name">
 
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" id="insertuseremail" placeholder="Enter email" name="email">
+        
+              <label for="pwd">Password:</label>
+              <input type="password" class="form-control" id="insertuserpwd" placeholder="Enter password" name="pwd">
+      
+              <label for="num">Number:</label>
+              <input type="number" class="form-control" id="insertusernumber" placeholder="Enter number" name="number">
+               
+              <label for="city">City:</label>
+              <input type="text" class="form-control" id="insertusercity" placeholder="Enter city" name="name">
+      
 
-
-
-
-
-
-
-
-
-
-
+              <label for="state">State:</label>
+              <input type="text" class="form-control" id="insertuserstate" placeholder="Enter state" name="name">
+      
+      
+              <button type="submit" class="btn btn-default" id="insertbuttonuser">Submit</button>
+            </div>
             
           </div>
         
+
+          <div id="searchuser" class="tab-pane fade">
+            <h1>Search User Details</h1>
+            
+            <div class="form-group" id="first3">
+    
+
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        
+              <label for="pwd">Password:</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+      
+       
+      
+      
+              <button type="submit" class="btn btn-default" id="searchbuttonuser">Search</button>
+            </div>
+            
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </div>
       </div>
       
