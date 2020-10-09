@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
+<link rel="stylesheet" href="css/styles.css" type="text/css">
 
-table, td, th {
-  border: 1px solid black;
-  padding: 5px;
-}
-
-th {text-align: left;}
-</style>
 </head>
 <body>
    
 
 
+
+
+
+
+<div class="container" id="box1" >
+
+
+<div id="heading1">
+<h2>User Information</h2>
+</div>
+
+
 <?php
-
-
-
 
 $host = "localhost";
 $user = "root";
@@ -36,14 +34,41 @@ if(isset($_POST['uemail'])){
 
 
 $email = $_POST['uemail'];
-
+$i = 1;
 
 $sql = "SELECT * FROM `user_info` WHERE `email`= '$email'";
 $result = mysqli_query($con,$sql);
+while($row = mysqli_fetch_array($result)) {
+
+?>
 
 
 
 
+
+<div id="top">
+<h3>User <?php echo  $i ?></h3>
+</div>
+
+<div id="#data">
+<ul id="#dataul" style="  font-size: 20px;
+  margin-top: 20px;
+  list-style-type:none;
+  font-family: Sen ,serif;">
+ <li>   Username:
+    <?php  echo  $row['username'] ;   ?></li>
+    
+    <li>   City:
+    <?php  echo  $row['city'] ;   ?></li>
+    
+    <li>   State:
+    <?php  echo  $row['state'] ;   ?></li>
+    
+    <?php   ?>
+</ul>
+</div>
+
+<!-- 
 
 // echo "<br>";
 //   echo "<table>
@@ -57,13 +82,18 @@ $result = mysqli_query($con,$sql);
 // while($row = mysqli_fetch_array($result)) {
 //   echo "<tr>";
 //   echo "<td>" . $row['username'] . "</td>";
- 
-//   echo "<td>" . $row['wallet'] . "</td>";
+//  if($row['wallet']!=NULL){
+//   echo "<td>" . $row['wallet'] . "</td>";}
+
+//   else
+//   { echo "<td> No money </td>";}
 //   echo "<td>" . $row['city'] . "</td>";
 //   echo "<td>" . $row['state'] . "</td>";
 //   echo "</tr>";
 // }
-// echo "</table>";
+// echo "</table>"; -->
+<?php
+$i=$i+1;}
 mysqli_close($con);
 }
 else{
@@ -73,6 +103,10 @@ else{
 
 
 
-?>
+
+?></div>
+
+
+
 </body>
 </html>

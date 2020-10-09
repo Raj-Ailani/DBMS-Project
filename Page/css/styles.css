@@ -285,6 +285,8 @@ background-color: #f6f7d7 ;
 }
 
 
+
+
 #TeamMember p{
     font-size: 30px;
     margin-top: 20px;
@@ -374,7 +376,30 @@ background-color: #f6f7d7 ;
 #first3 button{
   margin-top: 20px;
 }
+#box1{
+  background-color: white;
+  margin-top: 40px;
+  border-radius: 50px;
+  height: 90vh;
+  
+}
 
+#dataul{
+  font-size: 40px;
+  margin-top: 20px;
+  list-style-type:none;
+  font-family: Faster One ,serif;
+}
+#heading1 {
+
+  padding: 0 0 10px 0;
+  margin: 15px;
+}
+#top {
+  border-bottom   : 2px solid rgba(0,0,0,0.1);
+  padding: 0 0 10px 0;
+  margin: 15px;
+}
 
 
 
