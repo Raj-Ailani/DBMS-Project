@@ -86,6 +86,25 @@ $(document).ready(function(){
 
 
 
+  
+  $("#query1btn").click(function(){
+    var queryid = $("#queryid").val();
+    
+    $.post("../Page/php/query1.php",{
+       qid :queryid 
+
+    },function(data,status){
+        $("#queryfirst").html(data);
+      
+  
+    });
+
+});
+
+
+
+
+
 
 
 

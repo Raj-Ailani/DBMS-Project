@@ -63,7 +63,7 @@ while($row = mysqli_fetch_array($result)) {
     
     <?php   ?>
 </ul>
-<button type="button" class="btn btn-primary" id="book" >Book Taxi</button>
+<button type="button" class="btn btn-primary" id="bookbtn" >Book Taxi</button>
 </div>
 
 
