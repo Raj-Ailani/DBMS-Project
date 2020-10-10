@@ -75,7 +75,7 @@ if(isset($_POST['qid2'])){
 
 
 
-    $sql = "SELECT driver_info.drivername,driver_info.driveremail, driver_info.shift, accident.date_time AS accident_record
+    $sql = "SELECT driver_info.drivername,driver_info.driveremail, driver_info.shift,accident.location, accident.date_time AS accident_record
     FROM driver_info
     INNER JOIN accident ON accident.driverid = driver_info.driverid
     WHERE driver_info.driveremail ='$id'";
@@ -119,6 +119,7 @@ if(isset($_POST['qid2'])){
   <tr>
   <th>Number</th>
   <th>Date And Time</th>
+  <th>Location</th>
   </tr>
   <?php
     while($row = mysqli_fetch_array($result)) {
@@ -128,7 +129,7 @@ if(isset($_POST['qid2'])){
 echo "<td> Accident-" .$i. "</td>";
 
 echo "<td>". $row['accident_record'] . "</td>";
-
+echo "<td>". $row['location'] . "</td>";
 
 ?>
 
