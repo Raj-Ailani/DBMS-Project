@@ -4,8 +4,10 @@
 <link rel="stylesheet" href="css/styles.css" type="text/css">
 <style>
     #bookinfo{
-        border   : 2px solid rgba(0,0,0,0.1);
-        margin-top :50px;
+         
+                margin-top :50px;
+                    margin-bottom :50px;
+
     
     }    
     #bookinfo h3{

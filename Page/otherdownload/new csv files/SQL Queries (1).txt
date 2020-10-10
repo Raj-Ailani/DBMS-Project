@@ -1,37 +1,37 @@
 //User information
-SELECT user_info.username, user_info.wallet, booking.price, booking.date_time
+SELECT user_info.username, user_info.wallet, booking.fare, booking.date_time
 FROM user_info
 INNER JOIN booking ON user_info.userid = booking.userid
-WHERE booking.userid = 34
+WHERE booking.userid = 103
 
 --------------------------------------------------------------------------------------------
 //Driver Information
-SELECT driver_info.drivername, driver_info.shift, driver_info.wallet, accident.date_time AS accident_record
+SELECT driver_info.drivername, driver_info.shift, accident.date_time AS accident_record
 FROM driver_info
 INNER JOIN accident ON accident.driverid = driver_info.driverid
-WHERE driver_info.driverid = 12
+WHERE driver_info.driverid = 1102
 --------------------------
-SELECT violation.date_time AS violation_record
+SELECT violation.date_time,violation.carid,violation.fine AS violation_record
 FROM driver_info
 INNER JOIN violation ON violation.driverid = driver_info.driverid
-WHERE driver_info.driverid = 12
+WHERE driver_info.driverid = 1108
 --------------------------
 //Total rides by a driver
-SELECT COUNT(driverid) AS total_rides FROM booking WHERE driverid =12 AND driverid NOT IN ( SELECT driverid FROM cancel_booking WHERE driverid = 12 AND booking.date_time = cancel_booking.date_time)
+SELECT COUNT(driverid) AS total_rides FROM booking WHERE driverid =1108 AND driverid NOT IN ( SELECT driverid FROM cancel_booking WHERE driverid = 1108 AND booking.date_time = cancel_booking.date_time)
 --------------------------
 //driver wallet
 SELECT wallet - 2*(
 SELECT COUNT(blackbox.carid)
 FROM blackbox
 INNER JOIN driver_info ON driver_info.carid = blackbox.carid
-WHERE driver_info.driverid = 12 AND driver_info.carid NOT IN (SELECT carid
+WHERE driver_info.driverid = 1102 AND driver_info.carid NOT IN (SELECT carid
                                                         FROM accident
-                                                        WHERE driverid = 12 AND accident.date_time = blackbox.date_time
+                                                        WHERE driverid = 1102 AND accident.date_time = blackbox.date_time
 )
 ) - (
 SELECT SUM(fine)
          FROM violation
-         WHERE driverid = 12
+         WHERE driverid = 1102
           GROUP BY driverid
 )
 FROM driver_info

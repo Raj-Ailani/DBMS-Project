@@ -388,16 +388,11 @@ background-color: #f6f7d7 ;
   background-color: white;
   margin-top: 40px;
   border-radius: 50px;
-  height: 90vh;
+
   
 }
 
-#dataul{
-  font-size: 40px;
-  margin-bottom: 50px;
-  list-style-type:none;
-  font-family: Faster One ,serif;
-}
+
 #heading1 {
 
   border-bottom   : 2px solid rgba(0,0,0,0.1);
@@ -429,10 +424,17 @@ background-color: #f6f7d7 ;
 }
 #heading2 h4{
 
-  
+  margin: 15px;
   font-size: 30px;
+  font-weight: bold;
 }
 
+#querysecond label{
+  margin-top: 20px;
+}
+#querysecond button{
+  margin-top: 20px;
+}
 
 
 /* ---------------------------------------Project Page---------------------------------- */

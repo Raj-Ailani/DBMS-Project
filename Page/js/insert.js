@@ -107,6 +107,20 @@ $(document).ready(function(){
 
 
 
+  
+$("#query2btn").click(function(){
+  var queryid2 = $("#queryid2").val();
+  
+  $.post("../Page/php/query2.php",{
+     qid2 :queryid2 
+
+  },function(data,status){
+      $("#querysecond").html(data);
+
+
+  });
+
+});
 
 
 

@@ -56,6 +56,8 @@ while($row = mysqli_fetch_array($result)) {
     <?php  echo  $row['driverid'] ;   ?></li>
     <li>   Name:
     <?php  echo  $row['drivername'] ;   ?></li>
+    <li>   Phone:
+    <?php  echo  $row['drivernumber'] ;   ?></li>
     <li>   Age:
     <?php  echo  $row['age'] ;   ?></li>
     <li>   Driving Licence:
