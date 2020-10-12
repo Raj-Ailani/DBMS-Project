@@ -13,7 +13,7 @@
 }    
 table {
     margin: 15px;
- 
+ font-size:15px;
   border-collapse: collapse;
     margin-bottom : 50px;
 }
@@ -27,8 +27,8 @@ th {text-align: left;}
 
 #heading3 h4{
 
-margin:20px;    
-font-size: 20px;
+margin:25px;    
+font-size: 25px;
 }
 
     </style>
@@ -66,15 +66,29 @@ $con=mysqli_connect($host,$user,$pass,$db);
 
 if(isset($_POST['qid2'])){
 
+
     $i = 1;
+
+
+
+
+    // Query 3-----------------------------------------------------------
+    $sql2="SELECT COUNT(driverid) AS total_rides FROM booking WHERE driverid =1108 AND driverid NOT IN ( SELECT driverid FROM cancel_booking WHERE driverid = 1108 AND booking.date_time = cancel_booking.date_time)";
+    $result2 = mysqli_query($con,$sql2);
+// ---------------------------------------------------------------------------
+
+
+
+// Query 2--------------------------------------------------------------
     $trysql = "SELECT *
     FROM driver_info
     WHERE driver_info.driveremail = '$id'";
     $result1 = mysqli_query($con,$trysql);
 
+// --------------------------------------------------------------
 
 
-
+//Query1 --------------------------------------------------------------
     $sql = "SELECT driver_info.drivername,driver_info.driveremail, driver_info.shift,accident.location, accident.date_time AS accident_record
     FROM driver_info
     INNER JOIN accident ON accident.driverid = driver_info.driverid
@@ -102,10 +116,18 @@ if(isset($_POST['qid2'])){
     <?php  echo  $row1['aadhar'] ;   ?></li>
     <li>   Shift:
     <?php  echo  $row1['shift'] ;   ?></li>
+    <?php
+   while($row2 = mysqli_fetch_array($result2)) {
+    ?>
+        <li>   Total Rides:
+    <?php  echo  $row2['total_rides'] ;   ?></li>
+    <?php
+   };
+?>
 
 <?php
 };
-?>
+?></ul>
 
 
 
@@ -113,7 +135,7 @@ if(isset($_POST['qid2'])){
 
 
 <div id="heading3">
-    <h4>Accident Record<h4>
+    <h4>Accident Record</h4>
 </div>
     <table>
   <tr>
